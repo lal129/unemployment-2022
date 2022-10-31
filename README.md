@@ -22,13 +22,10 @@ ALPHAVANTAGE_API_KEY="___"
 ## Usage
 Run Unemployment Report: 
 ```sh
-python app/unemployment.py
-
-#or pass env var from command line:
-ALPHAVANTAGE_API_KEY="___" python app/unemployment.py
+python -m app.unemployment
 ```
 
 Run stocks report:
 ```sh
-python app/stocks.py
+python -m app.stocks
 ```
