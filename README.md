@@ -11,6 +11,13 @@ Install Package Dependencies:
 ```sh
 pip install -r requirements.txt
 ```
+## Configuration
+Obtain an API KEY from AlphaVantage
+
+Then create a local ".env" file and provide key like this:
+```sh
+ALPHAVANTAGE_API_KEY="___"
+```
 
 ## Usage
 Run Unemployment Report: 
