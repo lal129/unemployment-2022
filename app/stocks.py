@@ -1,37 +1,38 @@
 # this is the "app/stocks.py" file...
 
-print("STOCKS REPORT...")
-
-
 from pandas import read_csv
 from app.alpha import API_KEY
 
 def format_usd(my_price):
     return f"${my_price:,.2f}"
 
-symbol = input("Please input a crypto symbol (default: 'NFLX'): ") or "NFLX"
-print("SYMBOL:", symbol)
+if __name__ == "__main__":
 
-request_url = f"https://www.alphavantage.co/query?function=TIME_SERIES_DAILY_ADJUSTED&symbol={symbol}&apikey={API_KEY}&datatype=csv"
+    print("STOCKS REPORT...")
 
-df = read_csv(request_url)
-print(df.columns)
-print(df.head())
-#breakpoint()
+    symbol = input("Please input a crypto symbol (default: 'NFLX'): ") or "NFLX"
+    print("SYMBOL:", symbol)
 
-# CHALLENGE A:
-# print the latest closing date and price
+    request_url = f"https://www.alphavantage.co/query?function=TIME_SERIES_DAILY_ADJUSTED&symbol={symbol}&apikey={API_KEY}&datatype=csv"
 
-latest = df.iloc[0]
+    df = read_csv(request_url)
+    print(df.columns)
+    print(df.head())
+    #breakpoint()
 
-#print(latest["timestamp"])
-#print(latest["close"])
-print("LATEST:", format_usd(latest["adjusted_close"]), "as of", latest["timestamp"])
+    # CHALLENGE A:
+    # print the latest closing date and price
 
-# Challenge B
-#
-# What is the highest high price (formatted as USD)?
-# What is the lowest low price (formatted as USD)?
+    latest = df.iloc[0]
 
-print("HIGH:", format_usd(df["high"].max()))
-print("LOW:", format_usd(df["low"].min()))
+    #print(latest["timestamp"])
+    #print(latest["close"])
+    print("LATEST:", format_usd(latest["adjusted_close"]), "as of", latest["timestamp"])
+
+    # Challenge B
+    #
+    # What is the highest high price (formatted as USD)?
+    # What is the lowest low price (formatted as USD)?
+
+    print("HIGH:", format_usd(df["high"].max()))
+    print("LOW:", format_usd(df["low"].min()))
