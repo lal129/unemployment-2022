@@ -7,10 +7,11 @@ conda create -n unemployment-env python=3.8
 conda activate unemployment-env
 ```
 
-Install Package Dependencies:
+## Install Package Dependencies:
 ```sh
 pip install -r requirements.txt
 ```
+
 ## Configuration
 Obtain an API KEY from AlphaVantage
 
