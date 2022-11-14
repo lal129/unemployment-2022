@@ -1,6 +1,6 @@
 # unemployment-2022
 
-## Setup
+## Setup:
 Create enviornment:
 ```sh
 conda create -n unemployment-env python=3.8
@@ -12,7 +12,7 @@ conda activate unemployment-env
 pip install -r requirements.txt
 ```
 
-## Configuration
+## Configuration:
 Obtain an API KEY from AlphaVantage
 
 Then create a local ".env" file and provide key like this:
@@ -20,7 +20,7 @@ Then create a local ".env" file and provide key like this:
 ALPHAVANTAGE_API_KEY="___"
 ```
 
-## Usage
+## Usage:
 Run Unemployment Report: 
 ```sh
 python -m app.unemployment
@@ -31,7 +31,7 @@ Run stocks report:
 python -m app.stocks
 ```
 
-## Testing
+## Testing:
 Run tests:
 ```sh
 pytest
