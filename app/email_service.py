@@ -16,6 +16,7 @@ def send_email(subject="[Daily Briefing] This is a test", html="<p>Hello World</
     Sends an email with the specified subject and html contents to the specified recipient,
 
     If recipient is not specified, sends to the admin's sender address by default.
+    """
     client = SendGridAPIClient(SENDGRID_API_KEY) #> <class 'sendgrid.sendgrid.SendGridAPIClient>
     print("CLIENT:", type(client))
     print("SUBJECT:", subject)
